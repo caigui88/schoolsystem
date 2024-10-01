@@ -1,0 +1,66 @@
+spring:
+  application:
+    name: school-service
+  profiles:
+    active: dev
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${mysql.hostname}:${mysql.port}/${mysql.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true&rewriteBatchedStatements=true
+    username: ${mysql.username}
+    password: ${mysql.password}
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      auto-commit: true
+      maximum-pool-size: 10
+      minimum-idle: 10
+      connection-test-query: select 1
+      connection-timeout: 20000
+      data-source-properties:
+        cachePreStmts: true
+        dataSource.cachePreStmtst: true
+        dataSource.preStmtCacheSize: 250
+        dataSource.preStmtCacheSqlLimit: 2048
+        dataSource.useServerPrepStmts: true
+
+  data:
+    redis:
+      host: ${redis.hostname}
+      port: ${redis.port}
+      password:
+      lettuce:
+        pool:
+          max-active: ${redis.lettuce.pool.max-active}
+          max-idle: ${redis.lettuce.pool.max-idle}
+          min-idle: ${redis.lettuce.pool.min-idle}
+          max-wait: ${redis.lettuce.pool.max-wait}
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: cn.edu.school.schoolservice.entity
+
+logging:
+  level:
+    cn.edu.school.schoolservice: debug
+  pattern:
+    dateformat: HH:mm:ss:SSS
+  # file:
+   # path: "logs/${spring.application.name}"
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  packages-to-scan: cn.edu.school.schoolservice
+  default-flat-param-object: true
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn

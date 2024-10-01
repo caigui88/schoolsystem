@@ -1,0 +1,10 @@
+15:26:03:719  INFO 12220 --- [school-service] [main] c.e.s.s.SchoolServiceApplicationTests    : Starting SchoolServiceApplicationTests using Java 17.0.4 with PID 12220 (started by admin in D:\HNU\HNU程序设计\ideaU-JavaCode\SchoolSystem\school-service)
+15:26:03:720 DEBUG 12220 --- [school-service] [main] c.e.s.s.SchoolServiceApplicationTests    : Running with Spring Boot v3.3.4, Spring v6.1.13
+15:26:03:720  INFO 12220 --- [school-service] [main] c.e.s.s.SchoolServiceApplicationTests    : The following 1 profile is active: "dev"
+15:26:05:126  INFO 12220 --- [school-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+15:26:05:131  INFO 12220 --- [school-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:26:05:190  INFO 12220 --- [school-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 Redis repository interfaces.
+15:26:06:304  WARN 12220 --- [school-service] [main] c.b.m.core.injector.DefaultSqlInjector   : class cn.edu.school.schoolservice.entity.AdminRole ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+15:26:06:360  WARN 12220 --- [school-service] [main] c.b.m.core.injector.DefaultSqlInjector   : class cn.edu.school.schoolservice.entity.AuthorityRole ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+15:26:07:710  INFO 12220 --- [school-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name adminServiceImpl
+15:26:09:243  INFO 12220 --- [school-service] [main] c.e.s.s.SchoolServiceApplicationTests    : Started SchoolServiceApplicationTests in 6.0 seconds (process running for 7.582)
